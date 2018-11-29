@@ -12,4 +12,4 @@ lsof -i tcp:${PORT_NUMBER} | awk 'NR!=1 {print $2}' | xargs kill
 echo "killing........."
 sleep 3
 echo "Deploy new artifact........."
-nohup java -Dserver.port=8080 -jar ./target/mod-marccat-1.0.jar &
+nohup java -Dserver.port=8080 -jar ./target/mod-marccat-1.0.0-SNAPSHOT.jar &
